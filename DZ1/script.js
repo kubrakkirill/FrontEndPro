@@ -1,49 +1,49 @@
 let captionString = `Food prices ≠ <ВИВІД ПОТОЧНОГО ДНЯ>.<ВИВІД ПОТОЧНОГО МІСЯЦЯ>.<ВИВІД ПОТОЧНОГО РОКУ>`,
 
+    day = new Date().getDate();
+    month = new Date().getMonth();
+    month++;
+    year = new Date().getFullYear();
+//     productDate = `Food prices for `+day+`.`+month+`.`+year
+// console.log(productDate)
+
+    captionString = `Food prices ≠`+` `+day+`.`+month+`.`+year
+    captionString = captionString.replace(`≠`,`-`)
+console.log(captionString)
+
     apple = `🍎`,
     applePrice = 10,
     appleCount = 3,
     appleSalePercent = 7,
 
-    appleFinalPrice = applePrice*appleCount*(1-(appleSalePercent/100))
-// console.log(appleFinalPrice)
-    appleFinalPrice = appleFinalPrice.toFixed()
+    appleGeneralPrice = applePrice*appleCount*(1-(appleSalePercent/100))
+// console.log(appleGeneralPrice)
+    appleGeneralPrice = +appleGeneralPrice.toFixed()
 
-    appleFinal = `Final price for`+` `+appleCount+` `+apple+` = `+appleFinalPrice+` UAH`
-// console.log(appleFinal)
+    appleFinal = `Final price for`+` `+appleCount+` `+apple+` = `+appleGeneralPrice+` UAH`
+console.log(appleFinal)
 
     orange = `🍊`,
     orangePrice = 12,
     orangeCount = 2,
     orangeSalePercent = 3,
 
-    orangeFinalPrice = orangePrice*orangeCount*(1-(orangeSalePercent/100))
+    orangeGeneralPrice = orangePrice*orangeCount*(1-(orangeSalePercent/100))
 // console.log(orangeFinalPrice),
-    orangeFinalPrice = orangeFinalPrice.toFixed()
-    orangeFinal = `Final price for`+` `+orangeCount+` `+orange+` = `+orangeFinalPrice+` UAH`
-// console.log(orangeFinal)
+    orangeGeneralPrice = +orangeGeneralPrice.toFixed()
+    orangeFinal = `Final price for`+` `+orangeCount+` `+orange+` = `+orangeGeneralPrice+` UAH`
+console.log(orangeFinal)
 
     kiwi = `🥝`,
     kiwiPrice = 15,
     kiwiCount = 10,
     kiwiCountryPercent = 10;
 
-    kiwiFinalPrice = kiwiPrice*kiwiCount*(1+(kiwiCountryPercent/100))
+    kiwiGeneralPrice = kiwiPrice*kiwiCount*(1+(kiwiCountryPercent/100))
 // console.log(kiwiFinalPrice)
-    kiwiFinalPrice = kiwiFinalPrice.toFixed()
-    kiwiFinal = `Final price for`+` `+kiwiCount+` `+kiwi+` = `+kiwiFinalPrice+` UAH`
-// console.log(kiwiFinal)
+    kiwiGeneralPrice = +kiwiGeneralPrice.toFixed()
+    kiwiFinal = `Final price for`+` `+kiwiCount+` `+kiwi+` = `+kiwiGeneralPrice+` UAH`
+console.log(kiwiFinal)
 
-    generalPrice = `Food prices for all products = `+(appleFinalPrice+orangeFinalPrice+kiwiFinalPrice)+` UAH`
-// console.log(generalPrice)
-
-    day = new Date().getDate();
-    month = new Date().getMonth();
-    month++;
-    year = new Date().getFullYear();
-    productDate = `Food prices for `+day+`.`+month+`.`+year
-
-    captionString = captionString.replace(`≠`,`-`)
-    captionString = productDate+appleFinal+orangeFinal+kiwiFinal+generalPrice
-
-console.log(captionString)
+    productsGeneralPrice = `Food prices for all products = `+(appleGeneralPrice+orangeGeneralPrice+kiwiGeneralPrice)+` UAH`
+console.log(productsGeneralPrice)
