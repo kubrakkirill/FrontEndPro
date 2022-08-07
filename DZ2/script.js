@@ -10,7 +10,7 @@ let finalPrice = 0
 let choiceBurger = prompt(`hamburger or cheeseburger?`)
 if (choiceBurger === null || choiceBurger ===`` || choiceBurger === `hamburger`){
     finalPrice = finalPrice+hamburger
-} if (choiceBurger === `hamburger`)if (choiceBurger === `cheeseburger`){
+} if (choiceBurger === `cheeseburger`){
     finalPrice = finalPrice+cheeseburger
     let choiceDoubleCheese = confirm(`Would you like to add double cheese?`)
     if (choiceDoubleCheese){
