@@ -19,10 +19,10 @@ while (!userEmail || !userEmail.includes(`@`) || userEmail.startsWith(`@`) || us
 let userAge = prompt(`Enter your age`)
 if (userAge) userAge = userAge.replaceAll(` `,``)
 while (!userAge){
-    userAge = prompt(`Enter your age`)
+    userAge = prompt(`Enter your year of birth`)
     if (userAge) userAge = userAge.replaceAll(` `,``)
 }
-    userAge = 2022-userAge;
+    userAge = new Date().getFullYear()-userAge;
 document.write(`<ul>
     <li>Full name: ${userName} ${userSurname}</li>
     <li>Email: ${userEmail}</li>
