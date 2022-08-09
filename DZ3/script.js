@@ -16,7 +16,7 @@ while (!userEmail || !userEmail.includes(`@`) || userEmail.startsWith(`@`) || us
     userEmail = prompt(`Enter your email`)
     if (userEmail) userEmail = userEmail.replaceAll(` `, ``).toLowerCase()
 }
-let userAge = prompt(`Enter your age`)
+let userAge = prompt(`Enter your year of birth`)
 if (userAge) userAge = userAge.replaceAll(` `,``)
 while (!userAge){
     userAge = prompt(`Enter your year of birth`)
