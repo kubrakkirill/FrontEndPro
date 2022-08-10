@@ -6,7 +6,7 @@ while(!userName || userName === ``){
 }
 let userSurname = prompt(`Enter your surname`)
 if (userSurname) userSurname = userSurname.trim()
-while(!userSurname || userSurname === ``){
+while(!userSurname){
     userSurname = prompt(`Enter your surname`)
     if (userSurname) userSurname = userSurname.trim()
 }
@@ -18,7 +18,7 @@ while (!userEmail || !userEmail.includes(`@`) || userEmail.startsWith(`@`) || us
 }
 let userAge = prompt(`Enter your year of birth`)
 if (userAge) userAge = userAge.replaceAll(` `,``)
-while (!userAge){
+while (!isNaN){
     userAge = prompt(`Enter your year of birth`)
     if (userAge) userAge = userAge.replaceAll(` `,``)
 }
