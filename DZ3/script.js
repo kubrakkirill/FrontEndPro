@@ -18,7 +18,7 @@ while (!userEmail || !userEmail.includes(`@`) || userEmail.startsWith(`@`) || us
 }
 let userAge = prompt(`Enter your year of birth`)
 if (userAge) userAge = userAge.replaceAll(` `,``)
-while (!isNaN){
+while (!userAge || isNaN(userAge)){
     userAge = prompt(`Enter your year of birth`)
     if (userAge) userAge = userAge.replaceAll(` `,``)
 }
