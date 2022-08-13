@@ -1,5 +1,11 @@
+let start;
+do {
+    start = confirm(`Tell me three most important words 💚`)
+}while (!start)
+
+let sentence =``;
 let countOfWord = 1;
-// let word;
+
 for (;countOfWord<=3;countOfWord++){
     let word;
     do {
@@ -30,6 +36,7 @@ for (;countOfWord<=3;countOfWord++){
                 word = word[0].toUpperCase() + word.slice(1).toLowerCase();
                 console.log(`Result: ${word}`);
         }
+        sentence += `${word} `;
     }while (!typeOfWord || (typeOfWord !== `uppercase` && typeOfWord !== `lowercase` && typeOfWord !== `capitalize`))
 }
-
+console.log(`${sentence}!`)
