@@ -1,30 +1,35 @@
 let countOfWord = 1;
-let word;
-let typeOfWord;
+// let word;
 for (;countOfWord<=3;countOfWord++){
-    word = prompt(`Enter word #${countOfWord}`)
+    let word;
     do {
         word = prompt(`Enter word #${countOfWord}`)
-        console.log(`Word #${countOfWord}: ${word}`)
-        do {
-            typeOfWord = prompt(`Choose type for "${word}": uppercase/lowercase/capitalize?`)
-            switch (typeOfWord){
-                case `uppercase`:
-                    console.log(`Type of word: uppercase`)
-                    word = word.toUpperCase();
-                    console.log(`Result: ${word}`);
-                    break;
-                case `lowercase`:
-                    console.log(`Type of word: lowercase`)
-                    word = word.toLowerCase();
-                    console.log(`Result: ${word}`);
-                    break;
-                case `capitalize`:
-                    console.log(`Type of word: capitalize`)
-                    word = word[0].toUpperCase() + word.slice(1).toLowerCase();
-                    console.log(`Result: ${word}`);
-            }
-        }while (!typeOfWord || typeOfWord === `uppercase` || typeOfWord === `lowercase` || typeOfWord === `capitalize`)
+        for (let i=0;i<word.length;){
+            if (!isNaN(word.charAt(i))){
+                word = false
+            } else (i++)
+        }
     } while (!word)
+    console.log(`Word #${countOfWord}: ${word}`)
+    let typeOfWord;
+    do {
+        typeOfWord = prompt(`Choose type for "${word}": uppercase/lowercase/capitalize?`)
+        switch (typeOfWord){
+            case `uppercase`:
+                console.log(`Type of word: uppercase`)
+                word = word.toUpperCase();
+                console.log(`Result: ${word}`);
+                break;
+            case `lowercase`:
+                console.log(`Type of word: lowercase`)
+                word = word.toLowerCase();
+                console.log(`Result: ${word}`);
+                break;
+            case `capitalize`:
+                console.log(`Type of word: capitalize`)
+                word = word[0].toUpperCase() + word.slice(1).toLowerCase();
+                console.log(`Result: ${word}`);
+        }
+    }while (!typeOfWord || (typeOfWord !== `uppercase` && typeOfWord !== `lowercase` && typeOfWord !== `capitalize`))
 }
 
