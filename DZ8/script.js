@@ -13,20 +13,25 @@ const food = [
     ['🍋','lemon',5],
     ['🍌','banana',7]
 ];
-function getInfo(arr) {
-    let tables = [];
+function getInfo(arr, tableCaption) {
+    let TRs = [];
     for (let i = 0; i < arr.length; i++) {
-        tables.push(renderTablesOfArray(arr[i]));
+        TRs.push(renderTR(arr[i]));
     }
-    return tables.join(``);
-    function renderTablesOfArray(arr) {
-        let TDs = [];
-        for (let i = 0; i < arr.length; i++) {
-            TDs.push(`<td>${arr[i]}</td>`);
-        }
-        return `<tr>${TDs.join(``)}</tr>`;
-    }
-}
-document.write (`<table>${getInfo(animals, `Animals`) }</table>`);
 
-document.write (`<table>${getInfo(food, `Animals`) }</table>`);
+    return `<table>
+        <caption>${tableCaption} info</caption>
+        ${TRs.join(``)}
+    </table>`;
+}
+
+function renderTR(arr) {
+    let TDs = [];
+    for (let i = 0; i < arr.length; i++) {
+        TDs.push(`<td>${arr[i]}</td>`);
+    }
+    return `<tr>${TDs.join(``)}</tr>`;
+}
+
+document.write(getInfo(animals, `Animals`));
+document.write(getInfo(food, `Animals`));
