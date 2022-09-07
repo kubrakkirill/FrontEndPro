@@ -34,4 +34,4 @@ function renderTR(arr) {
 }
 
 document.write(getInfo(animals, `Animals`));
-document.write(getInfo(food, `Animals`));
+document.write(getInfo(food, `Food`));
