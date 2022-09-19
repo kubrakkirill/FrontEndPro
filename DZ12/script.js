@@ -48,11 +48,9 @@ const Product = {
 const Vegetable = Object.create(Product);
     Vegetable.type = `Vegetable`;
     Vegetable.seasonKoef = 1.3;
-console.log(Vegetable)
 const Fruit = Object.create(Product);
     Fruit.type = `Fruit`;
     Fruit.seasonKoef = 2;
-console.log(Fruit)
 
 
 
@@ -63,7 +61,6 @@ function makePrototype(arr, objectProto){
     }
     return arr;
 }
-console.log(makePrototype(fruits, Fruit))
 function renderList(arr){
     let finish;
     for (let i = 0;i < arr.length;i++){
