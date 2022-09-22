@@ -10,15 +10,17 @@ function summerValue(value){
 function winterValue(value){
     return value*2;
 }
-
-function getPrice(arr, seasonFunc){
-let copiedProducts = arr;
-    console.log(copiedProducts)
-let result = 0;
-for (let i=0;i<copiedProducts.length;i++){
-    typeof seasonFunc === `function` ? result += seasonFunc(copiedProducts[i][1]) : result += copiedProducts[i][1];
+const getPrice = (arr, seasonFunc) => {
+    let copiedProducts = JSON.parse(JSON.stringify(arr))
+    let sum = getSum(copiedProducts);
+    return typeof seasonFunc === `function` ? seasonFunc(sum) : sum;
 }
-return result;
+
+const getSum = arr => {
+    return arr.reduce((sum, innerArr) => {
+        sum += innerArr[1];
+        return sum;
+    }, 0);
 }
 console.log(getPrice(products, summerValue))
 console.log(getPrice(products, winterValue))
